@@ -1,6 +1,6 @@
 # zarf-hivecell-demo
 
-Demo Zarf deployment to a Hivecell
+Deploy the classic 1993 game DOOM to a Hivecell using Zarf!
 
 ## Getting Started
 
