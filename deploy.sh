@@ -12,7 +12,7 @@ fi
 ./zarf destroy --confirm
 
 # Initialize
-./zarf init --confirm --components k3s,container-registry,management --host localhost
+./zarf init --confirm --components management --host localhost
 
 # Wait until the docker registry is ready
 timeout --foreground 300 bash -c 'while [[ "$(curl -sfSL --retry 15 --retry-connrefused --retry-delay 5 -o /dev/null -w "%{http_code}" "https://localhost/v2/")" != "401" ]]; do sleep 1; done' || false
